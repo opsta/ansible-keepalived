@@ -17,6 +17,8 @@ keepalived_check_process_name: haproxy
 # Variable for create VIP on OpenStack
 keepalived_os_assign_floating_ip: false
 
+keepalived_hosts_group: "{{ service_name | default(group_names[0]) }}"
+
 # keepalived_os_external_network: external-network
 # keepalived_os_network: dev-network
 # keepalived_os_security_groups:
