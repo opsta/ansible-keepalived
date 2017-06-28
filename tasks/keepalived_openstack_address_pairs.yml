@@ -53,7 +53,7 @@
   run_once: true
   delegate_to: 127.0.0.1
   when: item != 'localhost'
-  with_items: "{{ groups[group_names[0]] }}"
+  with_items: "{{ groups[keepalived_hosts_group] }}"
   register: keepalived_os_ports
 
 - name: Pair Keepalived instance to fixed-ip
